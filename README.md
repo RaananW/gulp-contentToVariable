@@ -24,7 +24,7 @@ worker.postMessage('Hello worker'); // Send data to our worker.
 ```
 But if we want to deliver a single file, we will need to do the following in main.js:
 
-```
+```javascript
 var workerScript = "self.onmessage = function(event) { postMessage(event.data); }";
 var blob = new Blob([workerScript], {type: 'application/javascript'});  
 var worker = new Worker(URL.createObjectURL(blob));  
@@ -53,7 +53,7 @@ gulp.task("workers", function (cb) {
 
 Now the "workers" task can be added to your pipe line (with the help of merge2) and merged to a singled file using gulp-concat:
 
-```
+```javascript
 gulp.task("build", ["workers"], function () {
     return merge2(
         gulp.src(pathToMainFiles),
@@ -61,8 +61,10 @@ gulp.task("build", ["workers"], function () {
         )
         .pipe(concat(newFilename));
 });
+```
 
 It is also possible to uglify the worker's files using uglify:
+
 ```javascript
 gulp.task("workers", function () {
     return gulp.src(pathToWorkerFiles).pipe(uglify()).pipe(srcToVariable({
