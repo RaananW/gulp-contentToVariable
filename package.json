@@ -1,0 +1,36 @@
+{
+  "name": "gulp-contentToVariable",
+  "description": "Converts file(s) content to js variable(s)",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RaananW/gulp-contentToVariable"
+  },
+  "author": "Raanan Weber <info@raananweber.com> (http://blog.raananweber.com/)",
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "gulpplugin"
+  ],
+  "dependencies": {
+    "gulp-util": "^3.0.7",
+    "through2": "^2.0.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "istanbul": "^0.4.2",
+    "localeval": "^15.2.3",
+    "mocha": "^2.4.5",
+    "should": "^8.2.1",
+    "stream-assert": "^2.0.3"
+  },
+  "scripts": {
+    "test": "mocha",
+    "coverage": "istanbul cover _mocha"
+  },
+  "engines": {
+    "node": ">= 0.12"
+  },
+  "license": "MIT"
+}
