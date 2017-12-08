@@ -73,7 +73,8 @@ gulp.task("workers", function () {
 });
 ```
 
-##Where is it being used actually?
+## Where is it being used actually?
+
 https://github.com/BabylonJS/Babylon.js is using it to build a single file for the WebGL engine.
 This plugin is used in two different places:
 
@@ -82,5 +83,6 @@ This plugin is used in two different places:
 
 This way, BabylonJS delivers a single file and no external dependencies.
 
-##License
+## License
+
 http://raananw.mit-license.org/
